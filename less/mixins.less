@@ -1,1 +1,34 @@
 // Mixins Here
+.sign-up-btn(@width:100px, @fontsize:1.8rem){
+    background-color: @btn-bg-color;
+    color: @btn-text;
+    width: @width;
+    height:40px;
+    border-radius: 15px;
+    font-size: @fontsize;
+    @media @phone {
+        width: 100%;
+        height: 75px;
+        border-radius: 10px;
+    }
+}
+.btn-hover(){
+    &:hover{
+        background-color: @btn-text;
+        color: @btn-bg-color;
+        @media @phone {
+            animation-name: colorshift;
+            animation-duration: 6s;
+            @keyframes colorshift{
+                0% {background-color: @btn-bg-color; color: @btn-text}
+                25% {background-color: red; color:green;}
+                50% {background-color: green; color: red;}
+                75% {background-color: yellow; color: blue;}
+                100% {background-color: @btn-bg-color; color: @btn-text}
+            }
+        }
+    }
+}
+.flex(){
+    display:flex;
+}

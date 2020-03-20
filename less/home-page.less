@@ -15,7 +15,7 @@
   }
 
   .space-images {
-    display: flex;
+    .flex();
     flex-wrap: wrap;
     width: 100%;
 
@@ -24,6 +24,17 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+    @media @phone {
+      .blast{
+        width:93%;
+      }
+      .sky{
+        display:none;
+      }
+      .launch{
+        display: none;
+      }
     }
   }
 
@@ -43,7 +54,7 @@
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
+    .flex();
     justify-content: center;
 
     .walk-text {
@@ -57,7 +68,9 @@
         margin-bottom: 26px;
       }
 
-      .btn {
+      button {
+        .sign-up-btn();
+        .btn-hover();
       }
     }
 
@@ -70,6 +83,21 @@
         height: auto;
         border-radius: 10px;
       }
+    }
+    
+    @media @phone {
+      width: 100%;
+      flex-direction: column-reverse;
+      .walk-text{
+        width: 100%;
+        padding-top:4%;
+      }
+      .walk-img{
+        width:100%;
+        margin-left: 0;
+      }
+      margin-top: 10px;
+      padding: 20px 25px;
     }
   }
 }// home
