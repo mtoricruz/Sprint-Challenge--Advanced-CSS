@@ -1,1 +1,18 @@
 // Mixins Here
+.sign-up-btn(@width:100px, @fontsize:1.8rem){
+    background-color: @btn-bg-color;
+    color: @btn-text;
+    width: @width;
+    height:40px;
+    border-radius: 15px;
+    font-size: @fontsize;
+}
+.btn-hover(){
+    &:hover{
+        background-color: @btn-text;
+        color: @btn-bg-color;
+    }
+}
+.flex(){
+    display:flex;
+}
